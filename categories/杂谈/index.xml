@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>文档 - 分类 - Foreseeable&#39;s blog</title>
+        <link>https://foreseeable.github.io/categories/%E6%9D%82%E8%B0%88/</link>
+        <description>文档 - 分类 - Foreseeable&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Oct 2020 16:29:59 &#43;0800</lastBuildDate><atom:link href="https://foreseeable.github.io/categories/%E6%9D%82%E8%B0%88/" rel="self" type="application/rss+xml" /><item>
+    <title>Hello World!</title>
+    <link>https://foreseeable.github.io/theme-documentation-extended-shortcodes/</link>
+    <pubDate>Fri, 30 Oct 2020 16:29:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://foreseeable.github.io/theme-documentation-extended-shortcodes/</guid>
+    <description><![CDATA[<p>Hello World!</p>]]></description>
+</item></channel>
+</rss>
