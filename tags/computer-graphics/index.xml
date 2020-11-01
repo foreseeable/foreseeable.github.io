@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Computer Graphics - 标签 - Foreseeable&#39;s blog</title>
+        <link>https://foreseeable.github.io/tags/computer-graphics/</link>
+        <description>Computer Graphics - 标签 - Foreseeable&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 31 Oct 2020 19:40:09 -0400</lastBuildDate><atom:link href="https://foreseeable.github.io/tags/computer-graphics/" rel="self" type="application/rss+xml" /><item>
+    <title>从0开始学Direct X12</title>
+    <link>https://foreseeable.github.io/directx-from-0/</link>
+    <pubDate>Sat, 31 Oct 2020 19:40:09 -0400</pubDate>
+    <author>作者</author>
+    <guid>https://foreseeable.github.io/directx-from-0/</guid>
+    <description><![CDATA[回忆了一下自己学计算机的动机，果然还是想做游戏。写引擎看起来也够有挑战性够有意思。 游戏引擎离不开图形学API，现有的api我都没什么了解。 于]]></description>
+</item></channel>
+</rss>
