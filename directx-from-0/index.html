@@ -34,7 +34,7 @@
                             "url": "https:\/\/foreseeable.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "Computer Graphics, DirectX12","wordcount":  1328 ,
+                        }],"genre": "posts","keywords": "Computer Graphics, DirectX12","wordcount":  1330 ,
         "url": "https:\/\/foreseeable.github.io\/directx-from-0\/","datePublished": "2020-10-31T19:40:09-04:00","dateModified": "2020-10-31T19:40:09-04:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Foreseeable","logo": "https:\/\/foreseeable.github.io\/images\/avatar.png"},"author": {
@@ -111,7 +111,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">从0开始学Direct X12</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Foreseeable</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-31">2020-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1328 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-31">2020-10-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1330 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -143,8 +143,11 @@
 <p>线性代数复习+DirectX接口科普</p>
 <p><strong>一些备忘</strong>：</p>
 <ul>
-<li><code>XMVECTOR</code> 是DirectX12提供的vector类型，由4个float组成，本质是<code>__m128</code>类型。</li>
-<li><code>XM_CALLCONV</code> 是DirectX用来帮助指定编译器用什么function call convention的修饰符（例如<code>__fastcall</code>和<code>__vectorcall</code>)。<code>__fastcall</code>在调用函数传参时，32位windows会在pass <code>__m128</code>时，把前三个<code>__m128</code>类型的参数给直接传给<em>SSE/SSE2</em>的寄存器，剩下的参数压倒栈里，64位会直接都压进栈。而<code>__vectorcall</code>会把前6个<code>__m128</code>参数直接传给<em>SSE/SSE2</em>寄存器。传参给寄存器显然比直接压栈快。
+<li>
+<p><code>XMVECTOR</code> 是DirectX12提供的vector类型，由4个float组成，本质是<code>__m128</code>类型。</p>
+</li>
+<li>
+<p><code>XM_CALLCONV</code> 是DirectX用来帮助指定编译器用什么function call convention的修饰符（例如<code>__fastcall</code>和<code>__vectorcall</code>)。<code>__fastcall</code>在调用函数传参时，32位windows会在pass <code>__m128</code>时，把前三个<code>__m128</code>类型的参数给直接传给<em>SSE/SSE2</em>的寄存器，剩下的参数压倒栈里，64位会直接都压进栈。而<code>__vectorcall</code>会把前6个<code>__m128</code>参数直接传给<em>SSE/SSE2</em>寄存器。传参给寄存器显然比直接压栈快。</p>
 <ul>
 <li>来源：https://docs.microsoft.com/en-us/windows/win32/dxmath/pg-xnamath-internals</li>
 <li>注意<code>XMVECTOR</code>作为参数时，为了性能，需要让参数类型按照一定顺序排列：
@@ -158,28 +161,27 @@
 </li>
 </ul>
 </li>
-<li>叉积（cross product）的结果一般是右手系（right hand rule）的，就是如果你想计算$a\times b$，那么拿出右手食指对准a的方向，中指对准b的方向，结果会指向大拇指。（我自己老是忘是左手还是右手，2d是顺时针还是逆时针）</li>
-<li><img
+<li>
+<p>叉积（cross product）的结果一般是右手系（right hand rule）的，就是如果你想计算$a\times b$，那么拿出右手食指对准a的方向，中指对准b的方向，结果会指向大拇指。（我自己老是忘是左手还是右手，2d是顺时针还是逆时针）</p>
+</li>
+<li>
+<p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/1920px-Right_hand_rule_cross_product.svg.png"
         data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/1920px-Right_hand_rule_cross_product.svg.png, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/1920px-Right_hand_rule_cross_product.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/1920px-Right_hand_rule_cross_product.svg.png 2x"
         data-sizes="auto"
         alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Right_hand_rule_cross_product.svg/1920px-Right_hand_rule_cross_product.svg.png"
-        title="img" /></li>
-<li>3d向量加一个维度变成齐次坐标，相关的矩阵变换（例如scale，translate，project）要会推导。</li>
-<li>值得注意的是DirectX使用row vector 来做矩阵乘法，这个似乎和OpenGL是反着的，所以如果按照column vector来写变换矩阵的话，得到的会是目标matrix的转置：</li>
-<li>$$\left[\begin{array}{llll}
-x^{\prime} &amp; y^{\prime} &amp; z^{\prime} &amp; w^{\prime}
-\end{array}\right]=\left[\begin{array}{llll}
-x &amp; y &amp; z &amp; w
-\end{array}\right]\left[\begin{array}{llll}
-m 11 &amp; m 12 &amp; m 13 &amp; m 14 \<br>
-m 21 &amp; m 22 &amp; m 23 &amp; m 24 \<br>
-m 31 &amp; m 32 &amp; m 33 &amp; m 34 \<br>
-m 41 &amp; m 42 &amp; m 43 &amp; m 44
-\end{array}\right]$$</li>
+        title="img" /></p>
+</li>
+<li>
+<p>3d向量加一个维度变成齐次坐标，相关的矩阵变换（例如scale，translate，project）要会推导。</p>
+</li>
+<li>
+<p>值得注意的是DirectX使用row vector 来做矩阵乘法，这个似乎和OpenGL是反着的，所以如果按照column vector来写变换矩阵的话，得到的会是目标matrix的转置：</p>
+</li>
 </ul>
+<p>\[ \left[\begin{array}{llll} x^{\prime} &amp; y^{\prime} &amp; z^{\prime} &amp; w^{\prime} \end{array}\right]=\left[\begin{array}{llll} x &amp; y &amp; z &amp; w \end{array}\right]\left[\begin{array}{llll} m 11 &amp; m 12 &amp; m 13 &amp; m 14 \\ m 21 &amp; m 22 &amp; m 23 &amp; m 24 \\ m 31 &amp; m 32 &amp; m 33 &amp; m 34 \\ m 41 &amp; m 42 &amp; m 43 &amp; m 44 \end{array}\right] \]</p>
 <p><strong>书第四章：</strong></p>
 <p>未完待续。。。</p>
 </div><div class="post-footer" id="post-footer">
