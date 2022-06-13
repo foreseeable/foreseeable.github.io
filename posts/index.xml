@@ -3,7 +3,15 @@
         <title>所有文章 - Foreseeable&#39;s blog</title>
         <link>https://foreseeable.github.io/posts/</link>
         <description>所有文章 | Foreseeable&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 31 Oct 2020 19:40:09 -0400</lastBuildDate><atom:link href="https://foreseeable.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Jun 2022 23:15:09 &#43;0800</lastBuildDate><atom:link href="https://foreseeable.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Feynman Exercise</title>
+    <link>https://foreseeable.github.io/feynman-exercise/</link>
+    <pubDate>Mon, 13 Jun 2022 23:15:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://foreseeable.github.io/feynman-exercise/</guid>
+    <description><![CDATA[<p>整点物理。</p>
+<p>题目来自费曼物理学讲义习题集</p>]]></description>
+</item><item>
     <title>从0开始学Direct X12</title>
     <link>https://foreseeable.github.io/directx-from-0/</link>
     <pubDate>Sat, 31 Oct 2020 19:40:09 -0400</pubDate>
